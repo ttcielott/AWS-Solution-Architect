@@ -1,0 +1,20 @@
+tasks:
+- name: terraform
+  before: |
+    brew tap hashicorp/tap \
+    brew install hashicorp/tap/terraform \
+    brew update \
+    brew upgrade hashicorp/tap/terraform
+    ==> Upgrading 1 outdated package:
+    hashicorp/tap/terraform 0.15.3 -> 1.0.0
+    ==> Upgrading hashicorp/tap/terraform 0.15.3 -> 1.0.0
+  #random utilies
+ - name: utils 
+  before: |
+    brew install tree \
+    brew install jq
+- name: aws-cli
+  env:
+    AWS_CLI_AUTO_PROMPT: on-partial
+  before: |
+    
