@@ -1,0 +1,20 @@
+{
+    "Statement": [
+       {
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": "arn:aws:iam::{another account id to allow access your s3 bucket}:root"
+          },
+          "Action": [
+            "s3:ListBucket",
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Resource": [
+                "arn:aws:s3:::bucket-policy-example-12",
+                "arn:aws:s3:::bucket-policy-example-12/*"
+            ]
+            
+       }
+    ]
+ }
