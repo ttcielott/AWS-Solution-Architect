@@ -16,7 +16,7 @@ For example
 aws s3api list-buckets
 ```
 
-The output of the cmd above is as follows.
+The output of the sh above is as follows.
 
 ```json
 {
@@ -32,7 +32,7 @@ The output of the cmd above is as follows.
 }
 ```
 
-You can query the name of the bucket by using the following cmd.
+You can query the name of the bucket by using the following sh.
 
 ```api
  aws s3api list-buckets --query 'Buckets[].Name' 

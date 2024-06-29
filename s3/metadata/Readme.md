@@ -2,25 +2,25 @@
 
 ## Create a bucket
 
-```cmd
+```sh
 aws s3 mb s3://metadata-fun-ab-123
 ```
 
 ### Creata a new file
 
-```cmd
+```sh
 echo "Hello Saturn!" > saturn.txt
 ```
 
 ## Upload a file with metadata
 
-```cmd
+```sh
 aws s3api put-object --bucket metadata-fun-ab-123 --key saturn.txt --body saturn.txt --metadata Planet=Saturn
 ```
 
 ## Get metadata through head object
 
-```cmd
+```sh
 aws s3api head-object --bucket metadata-fun-ab-123 --key saturn.txt
 ```
 
