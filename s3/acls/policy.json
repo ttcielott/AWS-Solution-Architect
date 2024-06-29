@@ -1,0 +1,17 @@
+{
+    "Grants": [
+      {
+        "Grantee": {
+          "DisplayName": "string",
+          "EmailAddress": "string",
+          "ID": "string",
+          "Type": "CanonicalUser"
+        },
+        "Permission": "FULL_CONTROL"
+      }
+    ],
+    "Owner": {
+      "DisplayName": "string",
+      "ID": "string"
+    }
+  }
