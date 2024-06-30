@@ -1,0 +1,13 @@
+> aws s3api put-public-access-block cors-example-13 BlockPublicAcls=true,Ignore                                                                               P
+ublicAcls=true,BlockPublicPolicy=false,RestrictPublicBuckets=false
+
+
+
+
+
+
+
+ 
+───────────────────────────────────────────────────────────────────────────────                                                                               ─
+[ENTER] Autocomplete Choice/Execute Command    [F1] Show Shortkey Help    [F2]                                                                                F
+ocus on next panel    [F3] Hide/Show Docs    [F5] Hide/Show Output                                                                   > aws s3api put-public-access-block cors-example-13 BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=false,RestrictPublicBuckets=false 

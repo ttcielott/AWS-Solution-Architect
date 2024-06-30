@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Web Page</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Web Page</h1>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <script type="text/javascript">
+        // Create a new instance of XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+
+        // Configure it: POST-request for the URL /submit-data
+        xhr.open('POST', 'https://sf1mhod6xa.execute-api.eu-west-2.amazonaws.com/prod/hello', true);
+
+        // Set up the request headers
+        xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+
+        // Define a callback function to handle the response
+        xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // Parse and handle the response
+            var response = JSON.parse(xhr.responseText);
+            console.log('Success:', response);
+        } else {
+            console.log('Request failed. Returned status of ' + xhr.status);
+        }
+        };
+
+        // Define a callback function to handle errors
+        xhr.onerror = function () {
+        console.error('Request error...');
+        };
+
+        // Send the request with the data
+        xhr.send();
+
+    </script>
+</body>
+</html>
