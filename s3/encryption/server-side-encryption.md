@@ -1,4 +1,6 @@
-# Encryption
+# Server-Side Encryption
+
+**Server-Side Encryption** is always-on for all new s3 objects. (default: SSE-S3)
 
 ## Create a bucket
 
@@ -8,6 +10,8 @@ aws s3 mb s3://encryption-fun-ab-124
 
 ## Create a file and Put Object with encryption SSE-S3 (default)
 
+**SSE-S** : Amazon s3 manages the keys, encrypts using AES-GCM (256-bit) algorithm.
+
 ```sh
 echo "Hello World" > hello.txt
 aws s3 cp hello.txt s3://encryption-fun-ab-124
@@ -16,6 +20,8 @@ aws s3 cp hello.txt s3://encryption-fun-ab-124
 If you check in the console, the current server-side encryption is SSE-S.
 
 ## Put Object with Encryption of SSE-KMS
+
+**SSE-KMS** : AWS Key Management Service (KMS) and you manage the keys.
 
 We will change the server-side encryption to SSE-KMS.
 
@@ -27,6 +33,8 @@ aws s3api put-object --bucket encryption-fun-ab-124 \
 ```
 
 ## Put Object with Encryption of SSE-C
+
+**SSE-C** : Customer provide key (you manage the keys)
 
 Create a Customer Key
 
